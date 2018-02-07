@@ -1,0 +1,25 @@
+{
+  "name": "knex-shopping",
+  "version": "1.0.0",
+  "description": "learning promise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DODHI5/knex-shopping.git"
+  },
+  "author": "zd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DODHI5/knex-shopping/issues"
+  },
+  "homepage": "https://github.com/DODHI5/knex-shopping#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "knex": "^0.14.2",
+    "pg": "^7.4.1"
+  }
+}
