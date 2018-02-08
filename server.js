@@ -1,9 +1,6 @@
-const environment = process.env.ENVIRONMENT || "development";
-const config = require("./knexfile.js")[environment];
-module.exports = require("knex")(config);
-const users = require("./routes/users");
-const products = require("./routes/products");
-const carts = require("./routes/carts");
+let users = require("./routes/users");
+let products = require("./routes/products");
+let cart = require("./routes/cart");
 
 const express = require("express");
 const PORT = process.env.PORT || 3000;
@@ -11,11 +8,10 @@ const app = express();
 const bodyParser = require("body-parser");
 const knex = require("./knex/knex.js");
 
-app.get("/tasks", (req, res) => {});
-
-app.use("/routes/users", users);
-app.use("/routes/products", products);
-app.use("/routes/carts", carts);
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use("/users", users);
+app.use("/products", products);
+app.use("/cart", cart);
 
 app.listen(PORT, err => {
   if (err) {
